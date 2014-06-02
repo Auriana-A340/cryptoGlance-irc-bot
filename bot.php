@@ -51,7 +51,7 @@ class Bot {
 		while (false !== ($file = readdir($handle))) {
 			if(stringEndsWith($file, '.php')) {
 				require('plugins/'.$file);
-				$pName = str_replace('.php', '', $file);
+				$pName = 'Plugin_' . str_replace('.php', '', $file);
 				$this->plugins[] = new $pName();
 			}
 		}

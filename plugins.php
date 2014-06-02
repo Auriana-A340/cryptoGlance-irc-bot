@@ -1,6 +1,11 @@
 <?php
 
 //RSS Reader
+$config['plugins']['help'] = array(
+        array('channel'=> $config['channel'][0]),
+);
+
+//RSS Reader
 $config['plugins']['rssReader'] = array(
         array('title'=> 'cryptoGlance', 'url'=>'http://www.reddit.com/r/cryptoglance/.rss',     'pollInterval' => 15,     'channel'=> $config['channel'][0]),
 );

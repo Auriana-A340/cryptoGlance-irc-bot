@@ -5,7 +5,7 @@
  * at specified intervalls and outputs changes
  * to the specified channel.
 **/
-class rssPlugin implements pluginInterface {
+class Plugin_Rss implements Plugin_Interface {
 
 	var $lastCleanTime;
 	var $socket;
@@ -14,7 +14,7 @@ class rssPlugin implements pluginInterface {
 	var $config;
 	var $lastMsgSent;
 
-        function init($config, $socket) {
+    function init($config, $socket) {
 		$this->config = $config;
 		$this->todo = array();
 		$this->rssConfig = $config['plugins']['rssReader'];
@@ -24,11 +24,9 @@ class rssPlugin implements pluginInterface {
 		$this->cleanFeedDB();
 	}
 
-        function onData($data) {
-        }
+    function onData($data) { }
 
-        function tick() {
-
+    function tick() {
 		//Clean up the RSS database each hour
 		if(($this->lastCleanTime + 3600) < time()) {
 			logMsg("rssPlugin: Cleaning RSS DB");
@@ -50,15 +48,11 @@ class rssPlugin implements pluginInterface {
 			}
 		}
 
-        }
+    }
 
-        function onMessage($from, $channel, $msg) {
+    function onMessage($from, $channel, $msg) { }
 
-        }
-
-        function destroy() {
-
-        }
+    function destroy() { }
 
 	/**
 	 * Makes sure that the RSS database is sane
@@ -97,7 +91,7 @@ class rssPlugin implements pluginInterface {
 					}
 					$content = null;	
 					$x = null;
-				}catch(Exception $e) {
+				} catch(Exception $e) {
 					logMsg($e->getMessage());
 				}
 			}
