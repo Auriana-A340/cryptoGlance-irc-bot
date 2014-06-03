@@ -1,6 +1,6 @@
 <?php
 
-interface pluginInterface {
+interface Plugin_Interface {
 
 	/**
 	Called when plugins are loaded
