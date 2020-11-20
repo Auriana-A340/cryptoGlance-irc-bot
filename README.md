@@ -1,7 +1,3 @@
-<a href="http://cryptoglance.info/" rel="external">http://cryptoglance.info</a>
-
-----
-
 ### What is this?
 
 We have forked <a href="https://github.com/Ueland/VikingBot" rel="external">Ueland/VikingBot</a> for our own personal use on our IRC Channel <a href="http://webchat.freenode.net/?channels=cryptoglance" rel="external">#cryptoGlance on freenode.net</a>.
